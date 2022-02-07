@@ -6,7 +6,7 @@ img_hsv = cv2.cvtColor(img,cv2.COLOR_BGR2HSV) # color space conversion - basic n
 lower_red_limit = np.array([150,150,0]) # adjust values if required
 upper_red_limit = np.array([180,255,255]) # adjust values if required
 
-mask = cv2.inRange(img_hsv, lower_red, upper_red) # prepare mask - shows occurence of red color in the image
+mask = cv2.inRange(img_hsv, lower_red_limit, upper_red_limit) # prepare mask - shows occurence of red color in the image
 
 cv2.imshow(cv2.resize(img,(200,200)))
 cv2.imshow(cv2.resize(mask,(200,200)))
